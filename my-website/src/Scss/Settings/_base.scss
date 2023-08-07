@@ -1,0 +1,46 @@
+$font-base: 'Orbitron', sans-serif;
+
+* {
+    box-sizing: border-box;    
+  }
+
+  html {
+    font-size: 13px;
+    // @include tablet {
+    //   font-size: 11px;
+    // }
+  }
+  
+  .background__container {
+    background-image: url("../../Images/background_wg.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    font-family: $font-base;
+  }
+    
+  
+  a {
+    text-decoration: none;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .container {
+    margin: 0 auto;
+    display: block;
+  
+    // @include notebook {
+    //   display: flex;
+
+    // }
+   
+  }
+  

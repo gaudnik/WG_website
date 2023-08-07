@@ -1,0 +1,35 @@
+.home {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+
+    &__logo {
+        margin: 0 auto;
+        color: white;
+        animation: fadeIn 2s ease-in-out;
+        line-height: 6rem;
+        
+        @include notebook{
+            scale: 1.3;
+        }
+        span {
+            font-size: 1.5rem;
+            color: greenyellow;
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+}

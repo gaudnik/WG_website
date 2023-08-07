@@ -1,0 +1,88 @@
+.contact {
+    overflow: hidden;
+    @include sections_mobile;
+    margin: 0 auto;
+    height: 100vh;
+
+    
+    @include tablet {
+        @include sections_tablet;
+        height: auto;
+    }
+
+    @include notebook {
+        width: 80%;
+        display: flex;
+        align-items: baseline;
+    }
+    
+    &__img {
+        margin: 0 auto;
+        // background-image: url("../Images/contact_form.png");
+        width: 20rem;
+        height: 20rem;
+        background-size: cover;
+    }
+
+    &__container {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+
+        @include notebook{
+            align-items: center;
+            border-radius: 20px;
+            padding: 2rem;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        padding: 0.5rem;
+        text-align: center;
+       
+        @include notebook {
+            width: 100%;    
+        }
+    }
+
+    &__control {
+        width: 100%;
+        height: 2rem;
+        border-radius: 0.45rem;
+        background-color: black;
+        border: none;
+        margin-top: 1rem;
+        border: 1px solid green;
+
+        @include notebook {
+            border: 2px solid greenyellow;
+        }
+    }
+
+    .message {
+        height: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    &__label {
+        color: white;  
+    }
+
+    &__description {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 3rem;
+        @include headers;
+
+        @include notebook{
+            width: 50%;
+        }
+        h2 {
+            margin-bottom: 2rem;
+        }
+    }
+}

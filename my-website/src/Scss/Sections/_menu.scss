@@ -1,0 +1,99 @@
+
+.menu {
+    &__btn {
+      display: none;
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      opacity: 0;
+      
+        &:checked {
+          & ~ .menu__nav {
+              display: flex;
+              z-index: 5;
+              width: 86%; 
+              position: fixed;
+              margin-top: 4rem;
+              margin-left: 2rem;
+              padding: 2rem;
+              background-color: rgb(0, 0, 0);
+              opacity: 0.9;
+              flex-direction: column;
+
+              @include notebook{
+                display: none;
+              }
+
+          .menu__element {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 0.5rem;
+            a{
+              color: white;
+
+            }
+           
+            a:active {
+              color: greenyellow;
+            }
+          }
+        }
+      }
+    }
+    
+
+    &__toggle {
+      position: fixed;
+      display: block;
+      margin: 2rem;
+
+      span {
+        width: 40px;
+        height: 3px;
+        display: block;
+        margin-bottom: 6px;
+        background-color: rgb(0, 255, 0);
+        transition: .3s all ease-in-out;
+        align-items: end;
+        box-shadow: 4px 4px 4px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+
+      @include notebook {
+        display: none;
+      }
+    }
+  }
+
+  .menu__nav{
+    display: none;
+
+    @include notebook{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2rem;
+
+        .menu__element{
+          text-align: center;
+
+          a{
+            color: white;
+            padding: 1rem;
+            font-size: 1.5rem;
+          }
+          :hover{
+            color: greenyellow;
+          }
+          :active {
+            color: green; 
+          }
+        }
+    }
+}

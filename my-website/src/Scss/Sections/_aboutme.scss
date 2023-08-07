@@ -1,0 +1,50 @@
+
+.aboutme {
+    background-image: url("../../Images/myphoto.jpeg");
+    @include sections_mobile;
+    height: 100%;
+    
+    @include tablet {
+        @include sections_tablet;
+    }
+
+    @include notebook {
+        @include sections_notebook;
+        justify-content: space-around;
+        padding:0 6rem;
+    }
+
+    &__description {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+
+    }
+   
+    &__image {
+        background-image: url("../../Images/myphoto.jpeg");
+       @include my_img;
+       background-position: top;
+       margin-bottom: 1rem;
+    //    width: 99rem;
+    //     height: 42rem;
+        @include notebook {
+            width: 99rem;
+            height: 42rem; 
+            margin: 3rem; 
+        }
+    }
+    &__description {
+        @include headers;
+        h2 {
+            line-height: 4rem;
+        }
+    }
+    &__text {       
+        @include text;
+        margin-bottom: 4rem;
+        @include notebook {
+            margin: 3rem;
+        }
+    }
+}
